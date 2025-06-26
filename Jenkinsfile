@@ -21,6 +21,9 @@ node ("docker") {
     stage ("Checkout SCM") {
         git branch: 'main', url: 'https://github.com/BibigulKosherova/jenkins-february-2025.git'
     }
+    stage ("Docker build") {
+        sh "docker build -t bibigul28/myapache:1.0.0 ."
+    }
     }
 }
 }
