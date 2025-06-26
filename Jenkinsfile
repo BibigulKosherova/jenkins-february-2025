@@ -39,7 +39,7 @@ node ("docker") {
     }
 
     stage ("Docker Push") {
-        sh "dpcker push ${DOCKER_USER}/myapache:1.0.0"
+        sh "docker push ${DOCKER_USER}/myapache:1.0.0"
     }
 }
 
